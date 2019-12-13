@@ -103,6 +103,9 @@ dist
 # TernJS port file
 .tern-port
 
+#packages
+package-lock.json
+package.json
 
 
 # My personal .gitignore
