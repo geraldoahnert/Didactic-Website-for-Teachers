@@ -1,0 +1,11 @@
+#containerCentralizado{
+	width: 500px;
+}
+
+#botoesDireita{
+	text-align: right;
+}
+
+#botoesEsquerda{
+	text-align: left;
+}
