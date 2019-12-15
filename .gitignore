@@ -109,4 +109,4 @@ package.json
 
 
 # My personal .gitignore
-conexao.php
+_conexao.php
