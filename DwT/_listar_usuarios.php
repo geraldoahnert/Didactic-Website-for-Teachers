@@ -50,6 +50,10 @@
 		      	<a class="btn btn-warning btn-sm" href="_editar_usuario.php?id=<?php echo $id_usuario ?>" role="button">
 		      		<i class="far fa-edit"></i>&nbsp;Editar
 		      	</a>
+
+		      		<a class="btn btn-danger btn-sm" href="_remover_usuario.php?id=<?php echo $id_usuario ?>" role="button">
+		      		<i class="fas fa-user-slash"></i>&nbsp;Remover
+		      	</a>
 		      </td>
 
 
