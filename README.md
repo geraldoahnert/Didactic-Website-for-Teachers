@@ -21,12 +21,6 @@ O foco gira em torno de um objetivo, que é a facilidade do professor avaliar se
   - Em construção, site vulnerável.
 
 <br>
-  
-###  :pencil: Objetivos
-
-  - Em construção.
-
-<br>
 
 ___
 
