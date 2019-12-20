@@ -17,6 +17,7 @@
 			<input type="text" name="categoria" class="form-control" placeholder="Digite o nome da Categoria"  autocomplete="off" required="true">
 		</div>
 		<div style="text-align: right">
+			<a href="index.html" class="btn btn-sm btn-warning" style="color: #FFFFFF">Voltar ao painel</a>
 			<button type="submit" class="btn btn-primary btn-sm">Cadastrar</button>
 		</div>
 	</form>

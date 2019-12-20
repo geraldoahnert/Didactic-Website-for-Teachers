@@ -110,3 +110,4 @@ package.json
 
 # My personal .gitignore
 _conexao.php
+.phpintel

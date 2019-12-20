@@ -29,7 +29,7 @@
 </div>	
 
 <div class="container" id="containerCentralizado" style="margin-top: 100px">
-	<form action="cadastro.html" method="post">
+	<form action="cadastro.php" method="post">
 	<div class="form-group">
 	    <label>Não possui conta?</label>
 	<div id="botoesEsquerda">

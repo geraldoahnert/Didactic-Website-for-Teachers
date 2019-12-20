@@ -27,11 +27,29 @@
 		<div>
 			<label>Sua categoria:</label>
 			<select class="form-control" name="cadastroCategoria" required="true">
-		      <option>Aluno do Ensino Fundamental</option>
-		      <option>Aluno do Ensino Médio</option>
-		      <option>Aluno de um Ensino Superior</option>
-		      <option>Professor</option>
-		      <option>Outro</option>
+
+				<?php
+
+				include '_conexao.php';
+
+				$sql = "SELECT * FROM categoria order by nome_categoria ASC";
+				$buscar = mysqli_query($conexao, $sql);
+
+
+				while($array = mysqli_fetch_array($buscar)){
+
+
+					$id_categoria = $array['id_categoria'];
+					$nome_categoria = $array['nome_categoria'];
+				
+
+				?>
+
+	     	 	<option><?php echo $nome_categoria ?></option>
+	     	 	
+		      	<?php } ?>
+
+
 	    	</select>
 	  	</div>
 

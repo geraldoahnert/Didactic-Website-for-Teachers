@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	
+
 
 
 
@@ -20,7 +20,7 @@
 	      <div class="card-body">
 	        <h5 class="card-title">Login</h5>
 	        <p class="card-text">Clique aqui para entrar na sua conta.</p>
-	        <a href="login.html" class="btn btn-primary">Login</a>
+	        <a href="login.php" class="btn btn-primary">Login</a>
 	      </div>
 	    </div>
 	  </div>
@@ -29,7 +29,7 @@
 	      <div class="card-body">
 	        <h5 class="card-title">Registro</h5>
 	        <p class="card-text">Clique aqui para se registrar.</p>
-	        <a href="cadastro.html" class="btn btn-primary">Cadastro</a>
+	        <a href="cadastro.php" class="btn btn-primary">Cadastro</a>
 	      </div>
 	    </div>
 	  </div>
@@ -50,6 +50,14 @@
 	      </div>
 	    </div>
 	  </div>	
+	  <div class="col-sm-6">
+	    <div class="card">
+	      <div class="card-body">
+	        <h5 class="card-title">Categoria</h5>
+	        <p class="card-text">Adicionar uma nova categoria.</p>
+	        <a href="_adicionar_categoria.php" class="btn btn-primary">Adicionar</a>
+	      </div>
+		</div>
 	</div>
 
 </div>
