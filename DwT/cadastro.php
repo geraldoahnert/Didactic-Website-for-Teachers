@@ -10,56 +10,69 @@
 
 
 
-<div class="container" id="containerCentralizado" style="margin-top: 40px">
-	<form action="_informacoes.php" method="post">
-		<div class="form-group">
-		    <label>Cadastro</label>
-		    <input type="email" class="form-control" name="cadastroEmail" placeholder="Email" autocomplete="off" required="true">
-		</div>
+	<div class="container" style="margin: 100px auto; width: 300px;">
+		
+		<form class="form-group" action="_informacoes.php" method="post">
+				<div class="form-group">
+					<label><i class="fas fa-user"></i></label>
+					<input type="text" name="userRegister" class="form-control" required="true" placeholder="Email">
+				</div>
 
-		<div class="form-group">
-		    <input type="password" class="form-control" name="cadastroPasswd" placeholder="Senha" required="true">
-		</div>
-			<div class="form-group">
-		    <input type="password" class="form-control" name="cadastroConfPasswd" placeholder="Confirmar Senha" required="true">
-		</div>
-
-		<div>
-			<label>Sua categoria:</label>
-			<select class="form-control" name="cadastroCategoria" required="true">
-
-				<?php
-
-				include '_conexao.php';
-
-				$sql = "SELECT * FROM categoria order by nome_categoria ASC";
-				$buscar = mysqli_query($conexao, $sql);
+				<div class="form-group" style="margin-top: 5%">
+					<label><i class="fas fa-lock"></i></label>
+					<input type="password" name="passwordRegister" class="form-control" required="true" placeholder="Senha">
+					<input style="margin-top: 5%" type="password" name="passwordRegisterConfirm" class="form-control" required="true" placeholder="Repita">
+				</div>
 
 
-				while($array = mysqli_fetch_array($buscar)){
+				<div class ="form-group">
+
+					<label><i class="fas fa-project-diagram"></i></label>
+					<select name="nivelusuario" class="form-control">
+						<option value="1">Administrador</option>}
+						<option value="2">Funcionário</option>}
+						<option value="3">Conferente</option>}
+					</select>
+
+				</div>
 
 
-					$id_categoria = $array['id_categoria'];
-					$nome_categoria = $array['nome_categoria'];
-				
+				<div class="form-group">
+					<label><i class="fas fa-graduation-cap"></i></label>
+					<select class="form-control" name="cadastroCategoria" required="true">
 
-				?>
+							<?php
 
-	     	 	<option><?php echo $nome_categoria ?></option>
-	     	 	
-		      	<?php } ?>
+							include '_conexao.php';
+
+							$sql = "SELECT * FROM categoria order by nome_categoria ASC";
+							$buscar = mysqli_query($conexao, $sql);
 
 
-	    	</select>
-	  	</div>
+							while($array = mysqli_fetch_array($buscar)){
 
-	  	<div id="botoesDireita" style="margin-top: 10px">
-			<button type="submit" class="btn btn-primary btn-sm">Cadastrar</button>
-			<a href="login.html" role="button" class="btn btn-sm btn-secondary">Entrar</a>
-		</div>
-    </form>
 
-</div>	
+								$id_categoria = $array['id_categoria'];
+								$nome_categoria = $array['nome_categoria'];
+							
+
+							?>
+
+			     	 	<option><?php echo $nome_categoria ?></option>
+			     	 	
+				      	<?php } ?>
+
+
+		    		</select>
+		  		</div>
+
+				<div id="botoesDireita" class="form-group">
+					<a href="index.php" type="submit" class="btn btn-dark btn-sm">Entrar</a>
+					<button type="submit" class="btn btn-info btn-sm">Registrar</button>
+				</div> 
+		</form>
+
+	</div>	
 
 
 
@@ -69,6 +82,7 @@
 
 	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 	<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
-	<script type="text/javascript" src="node_modules/popper.js/dist/popper.js"></script>
+	<script type="text/javascript" src="node_modules/popper.js/dist/popper.js"></script>	
+	<script src="https://kit.fontawesome.com/7afebb249a.js" crossorigin="anonymous"></script>
 </body>
 </html>
