@@ -12,26 +12,25 @@
 
 	<div class="container" style="margin: 100px auto; width: 300px;">
 		
-		<form class="form-group" action="_informacoes.php" method="post">
+		<form class="form-group" action="_cadastrar_usuario.php" method="post">
 				<div class="form-group">
 					<label><i class="fas fa-user"></i></label>
-					<input type="text" name="userRegister" class="form-control" required="true" placeholder="Email">
+					<input type="text" name="userEmail" class="form-control" required="true" placeholder="Email">
 				</div>
 
 				<div class="form-group" style="margin-top: 5%">
 					<label><i class="fas fa-lock"></i></label>
-					<input type="password" name="passwordRegister" class="form-control" required="true" placeholder="Senha">
-					<input style="margin-top: 5%" type="password" name="passwordRegisterConfirm" class="form-control" required="true" placeholder="Repita">
+					<input type="password" name="userPasswd" class="form-control" required="true" placeholder="Senha">
+					<input style="margin-top: 5%" type="password" name="passwordUserConfirm" class="form-control" required="true" placeholder="Repita">
 				</div>
 
 
 				<div class ="form-group">
 
 					<label><i class="fas fa-project-diagram"></i></label>
-					<select name="nivelusuario" class="form-control">
-						<option value="1">Administrador</option>}
-						<option value="2">Funcionário</option>}
-						<option value="3">Conferente</option>}
+					<select name="userLevel" class="form-control">
+						<option value="1">Aluno</option>}
+						<option value="2">Professor</option>}
 					</select>
 
 				</div>
@@ -39,7 +38,7 @@
 
 				<div class="form-group">
 					<label><i class="fas fa-graduation-cap"></i></label>
-					<select class="form-control" name="cadastroCategoria" required="true">
+					<select class="form-control" name="userCategoria" required="true">
 
 							<?php
 

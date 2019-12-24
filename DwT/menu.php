@@ -12,7 +12,7 @@
 
 
 
-<div class="container" style="margin-top: 100px">
+<div class="container" style="margin-top: 100px; color: black">
 
 	<div class="row">
 	  <div class="col-sm-6">
@@ -38,7 +38,7 @@
 </div>
 
 
-<div class="container" style="margin-top: 100px">
+<div class="container" style="margin-top: 100px; color: black">
 
 	<div class="row">
 	  <div class="col-sm-6">
