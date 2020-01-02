@@ -1,7 +1,7 @@
 ___
-# :blue_book: Didatic Website for Teachers
+# :blue_book: CRUD - Basic
 
-#### By student, to teachers and students.
+#### by Geraldo
 ___
 
 <br>
@@ -9,16 +9,9 @@ ___
 ___
 <br>
 
-###  :question: O que é o projeto
+###  :question: O que é?
 
-* O projeto irá usar a tecnologia em minha escola de Ensino Médio, ao qual irá contar com incentivo a didática, e também ao estudo da tecnologia em geral.
-O foco gira em torno de um objetivo, que é a facilidade do professor avaliar seus alunos e entre outras funções. Uma plataforma "mista" ao ponto de agregar várias funções.
-
-<br>
-
-###  :computer: Tecnologias
-
-  - Em construção, site vulnerável.
+* Uma interação básica entre front-end e back-end em PHP e MariaDB. O projeto é simples e contém vulnerabilidades, porém atende seu papel principal.
 
 <br>
 
