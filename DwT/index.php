@@ -10,12 +10,13 @@
 <body>
 
 	<div class="container" style="margin: 200px auto; width: 300px;">
-		
 		<form action="_informacoes.php" method="post">
+
 			<div class="form-group">
 				<label><i class="fas fa-user"></i></label>
 				<input type="text" name="usuario" class="form-control" required="true" placeholder="Email">
 			</div>
+
 			<div class="form-group">
 				<label><i class="fas fa-lock"></i></label>
 				<input type="password" name="senha" class="form-control" required="true" placeholder="Senha">
@@ -25,11 +26,9 @@
 				<a href="cadastro.php" type="submit" class="btn btn-dark btn-sm">Registrar</a>
 				<button type="submit" class="btn btn-info btn-sm">Entrar</button>
 			</div> 
+
 		</form>
-
 	</div>
-
-
 
 	<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
 	<script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
