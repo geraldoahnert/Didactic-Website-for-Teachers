@@ -1,19 +1,28 @@
-___
-# :blue_book: CRUD - Basic
+---
 
-#### by Geraldo
-___
+<p align="center">
+  <h1 align="center">CRUD</h1>
+  <h5 align="center">Procedural PHP</h5>
+  <hr>
+  <p align="center">
+    <a target="__blank" href="#">
+      <img src="https://img.shields.io/badge/status-in progress-red?&style=for-the-badge"/>
+      <img src="https://img.shields.io/badge/license-mit-blue?&style=for-the-badge"/>
+    </a>
+</p>
+
+---
+
+
+<br>
+<br>
+
+### Sobre o projeto
+
+Um crud básico usando PHP Procedural.
 
 <br>
 
 ___
-<br>
 
-###  :question: O que é?
-
-* Uma interação básica entre front-end e back-end em PHP e MariaDB. O projeto é simples e contém vulnerabilidades, porém atende seu papel principal.
-
-<br>
-
-___
 
