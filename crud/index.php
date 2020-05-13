@@ -1,42 +1,67 @@
 <?php
-require_once 'login_action.php';
+include_once 'php_action/db_connect.php';
+include_once 'includes/header.php';
+include_once 'includes/message.php';
 ?>
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Tela de Login</title>
-		<script src="https://kit.fontawesome.com/7afebb249a.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-	</head>
-	<body>
-		<div class="container" style="margin: 200px auto; width: 300px;">
-			<form action="login_action.php" method="post">
-				<div class="form-group">
-					<label><i class="fas fa-user"></i></label>
-					<input type="text" name="login" class="form-control" required="true" placeholder="Email">
-				</div>
-				<div class="form-group">
-					<label><i class="fas fa-lock"></i></label>
-					<input type="password" name="password" class="form-control" required="true" placeholder="Senha">
-				</div>
-				<div id="botoesDireita">
-					<a href="cadastro.php" type="submit" class="btn btn-dark btn-sm">Registrar</a>
-					<button type="submit" name="btn-login" class="btn btn-info btn-sm">Entrar</button>
-				</div>
+<div class="row">
+	<div class="col s12 m6 push-m3">
+		<h3 class="light">Users</h3>
+		<table class="striped">
+			<thead>
+				<tr class="light">
+					<th>Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+					<th>Age</th>
+				</tr>
+			</thead>
+			<tbody>
 				<?php
-					if (!empty($erros)) {
-						foreach ($erros as $erro) {
-							echo "<li> $erro </li>";
-						}
-					}
+					$sql = "SELECT * FROM clients";
+					$result = mysqli_query($connect, $sql);
+					if (mysqli_num_rows($result) > 0) {
+						while($userDatabase = mysqli_fetch_array($result)){
 				?>
-			</form>
-		</div>
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	</body>
-</html>
+				<tr>
+					<td><?php echo $userDatabase['name']; ?></td>
+					<td><?php echo $userDatabase['lastname']; ?></td>
+					<td><?php echo $userDatabase['email']; ?></td>
+					<td><?php echo $userDatabase['age']; ?></td>
+					<td><a href="useredit.php?id=<?php echo $userDatabase['id']; ?>" class="btn-floating orange"><i class="material-icons">edit</i></a></td>
+					<td><a href="#modal<?php echo $userDatabase['id']; ?>" class="btn-floating red modal-trigger"><i class="material-icons">delete</i></a></td>
+					<div id="modal<?php echo $userDatabase['id']; ?>" class="modal">
+						<div class="modal-content">
+							<h4>Alert</h4>
+							<p>Do you want to delete user?</p>
+						</div>
+						<div class="modal-footer">
+							<form action="php_action/delete.php" method="POST">
+								<input type="hidden" name="id" value="<?php echo $userDatabase['id']; ?>">
+								<button type="submit" name="btn-delete" class="btn red">Delete</button>
+								<a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
+							</form>
+						</div>
+					</div>
+				</tr>
+				<?php
+					}
+				} else {
+				?>
+				<tr>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+				</tr>
+				<?php
+				}
+				?>
+			</tbody>
+		</table>
+		<br>
+		<a href="useradd.php" class="btn">add new user</a>
+	</div>
+</div>
+<?php
+require_once 'includes/footer.php';
+?>
